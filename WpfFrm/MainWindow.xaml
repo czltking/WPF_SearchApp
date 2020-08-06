@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfFrm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFrm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <Button x:Name="btnSearch" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Content="搜索" Margin="20,30,0,0" Command="{Binding QueryCommand}" Click="btnSearch_Click"/>
+        <TextBox x:Name="txtKeyword" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding SearchText,Mode=OneWay}" Width="152" TextWrapping="Wrap" Margin="132,30,0,0" />
+        <TextBox x:Name="txtResult" HorizontalAlignment="Left" Width="240" TextWrapping="Wrap" Text="{Binding SearchResult,Mode=OneWay}" Margin="306,0,0,0" />
+
+        <Button x:Name="btnGet" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Content="跳转 WinPIC" Margin="32,88,0,0" Click="btnGet_Click" ></Button>
+        <Button x:Name="btnPage" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Content="跳转 Page" Margin="32,147,0,0" Click="btnPage_Click"  ></Button>
+    </Grid>
+    
+</Window>
